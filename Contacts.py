@@ -32,7 +32,7 @@ def input_validation(prompt):
         try:
             score = str(answer)
             if answer == "tick":
-                import main as easter
+                import easter as easter
                 easter.ACTIVE
             elif answer == "exit":
                 exit()
