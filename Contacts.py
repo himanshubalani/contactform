@@ -5,6 +5,7 @@ from csv import writer
 from contactcode import codes
 import re
 
+
 # predefined variables
 now = datetime.datetime.now()
 islongenough = False
@@ -30,8 +31,13 @@ def input_validation(prompt):
         answer = input(prompt)
         try:
             score = str(answer)
+            if answer == "tick":
+                import main as easter
+                easter.ACTIVE
+            elif answer == "exit":
+                exit()
             # if in range, we're done!
-            if 1 < len(score) < 50:
+            elif 1 < len(score) < 50:
                 return score
             # otherwise out of range, print an error message and keep looping
             else:
@@ -220,3 +226,4 @@ lil()
 sav = input("Do you wish to save this data? (Y/N)").title()
 csvsave(sav)
 print('Here you go!', "\n Saving your data...")
+print("Good Bye 👋")
